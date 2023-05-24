@@ -1,0 +1,486 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* Reset and base styles  */
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Links */
+
+a, a:link, a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Common */
+
+aside, footer, header, section, main {
+    display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+ul, ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+img, svg {
+    max-width: 100%;
+    height: auto;
+}
+
+address {
+    font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button, input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    background: none;
+    cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+legend {
+    display: block;
+}
+
+
+.container {
+    max-width: 1160px;
+    width: 100%;
+    margin: auto;
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+.section-header {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem;
+}
+
+.main_button {
+    display: inline-block;
+    background: #005FA3;
+    font-size: 1.125rem;
+    padding: 1.125rem;
+    color: #ffffff;
+}
+
+header {
+    padding: 1.375rem 0 1.938rem;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo_container {
+    flex: 0 0 25%;
+    display: flex;
+    align-items: center;
+    gap: 1.875rem;
+}
+
+.logo_container_image {
+    flex-shrink: 0;
+}
+
+.logo_container_text {
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: #005FA3;
+}
+
+.company_info_container {
+    align-self: flex-end;
+}
+
+.company_info {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 1rem;
+}
+
+.info_item {
+    margin-left: 2.5rem;
+    display: flex;
+    font-size: 0.813rem;
+    gap: 1rem;
+    color: #222222;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.info_item a {
+    color: #222222;
+}
+
+.menu_btn {
+    display: none;
+}
+
+.main_navigation {
+    margin-top: 1.375rem;
+}
+
+.main_navigation .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 0.875rem;
+    column-gap: 4.25rem;
+}
+
+.menu_item a {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #222222;
+}
+
+.burger_navigation {
+    display: none;
+}
+
+section {
+    background: url('./src/img/Rectangle.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.blur {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./src/img/Rectangle.webp"), #C4C4C4;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.slider_container {
+    padding: 10rem .3rem 7rem;
+}
+
+.slide_header {
+    max-width: 600px;
+    line-height: 66.37px;
+}
+
+.slider_container .main_button {
+    margin-top: 5rem;
+}
+
+.slider_controls {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.dots_container {
+    display: flex;
+    column-gap: 40px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+}
+
+.dot-active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.arrow {
+    display: inline-flex;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.2);
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow:hover {
+    background-color: rgba(225, 225, 225, 0.6);
+}
+
+
+.form_section .container {
+    padding: 7.625rem 0.3rem 8.75rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6.25rem;
+}
+
+.form_info_subinfo {
+    margin-top: 3.75rem;
+    font-size: 1.125rem;
+    font-weight: 300;
+}
+
+.social_container {
+    margin-top: 5rem;
+    display: flex;
+    font-size: 1.313rem;
+    font-weight: 300;
+}
+
+.social_item {
+    display: flex;
+    align-items: center;
+}
+
+.social_item:nth-child(2) {
+    margin-left: 2.5rem;
+}
+
+.social_item a {
+    color: #ffffff;
+    padding-left: 1rem;
+}
+
+.main_form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.875rem;
+}
+
+.main_form input, textarea {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #ffffff;
+    padding: 0 0.2rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.main_form textarea {
+    min-height: 100px;
+    outline: none;
+}
+
+.main_form .main_button {
+    grid-column-start: 2;
+    margin-top: 2rem;
+}
+
+.main_form .input_container:nth-of-type(3) {
+    grid-column: span 2;
+}
+
+footer .footer-info {
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 0.5rem;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 333;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    max-width: 300px;
+    padding: 1em 2em;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #222222;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1000px) {
+    header .container {
+        justify-content: space-between;
+        padding: 0 0.5rem;
+    }
+
+    .company_info_container {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .company_info {
+        padding-left: 0;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    .info_item {
+        margin-left: 0;
+        justify-content: flex-start;
+    }
+
+    .menu_btn {
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+    }
+
+    .menu_btn span {
+        width: 30px;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #222222;
+        transition: all 0.5s;
+    }
+
+    .menu_btn span:nth-of-type(2) {
+        top: calc(50% - 5px);
+    }
+
+    .menu_btn span:nth-of-type(3) {
+        top: calc(50% + 5px);
+    }
+
+    .menu_btn.active span:nth-of-type(1) {
+        display: none;
+    }
+
+    .menu_btn.active span:nth-of-type(2) {
+        top: 50%;
+        transform: translate(-50%, 0%) rotate(45deg);
+    }
+
+    .menu_btn.active span:nth-of-type(3) {
+        top: 50%;
+        transform: translate(-50%, 0%) rotate(-45deg);
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        padding: 15px;
+        background: linear-gradient(0deg, rgba(225, 225, 225, 0.6), rgba(225, 225, 225, 0.6)), #C4C4C4;;;
+        transform: translateX(200%);
+        transition: transform 0.5s;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu.active {
+        transform: translateX(100%);
+    }
+
+    .slider_container {
+        padding-inline: 1rem;
+    }
+
+    .form_section .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form_info {
+        text-align: center;
+    }
+
+    .form_info_subinfo {
+        max-width: 70%;
+        margin: 2rem auto;
+    }
+
+    .social_container {
+        justify-content: center;
+    }
+
+    .footer-info {
+        padding-inline: .5rem;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    html {
+        font-size: 70%;
+    }
+
+    .slide {
+        padding-left: 2rem;
+    }
+
+    .dots_container {
+        margin-inline: auto;
+    }
+
+    .arrows_container {
+        display: none;
+    }
+
+}
